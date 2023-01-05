@@ -1,18 +1,14 @@
 #!/usr/bin/python3
 
-def arg(args):
-    num = len(args) - 1
-    if num > 0:
-        print("{} arguments:".format(num))
-        x = 1
-        while x <= num:
-            print("{}: {}".format(x, args[x]))
-            x += 1
-    else:
-        print("{} arguments.".format(num))
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     import sys
 
-    arg(sys.argv)
+    count = len(sys.argv) - 1
+    if count == 0:
+        print('0 arguments.')
+    elif count == 1:
+        print('1 arguments:')
+    else:
+        print('{} arguments:'.format(count))
+    for i in range(count):
+        print('{}: {}'.format(i + 1, sys.argv[i + 1]))
