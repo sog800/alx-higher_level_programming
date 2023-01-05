@@ -11,6 +11,7 @@ def arg(args):
     else:
         print("{} arguments.".format(num))
 
+
 if __name__ == "__main__":
     import sys
 
